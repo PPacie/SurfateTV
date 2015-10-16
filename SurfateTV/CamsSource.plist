@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>spot</key>
+		<string>Mundaka</string>
+		<key>url</key>
+		<string>http://46.105.54.176:80/64connections/mundaka.stream/playlist.m3u8</string>
+		<key>image</key>
+		<string>http://wipeoutsurfmag.com/wp-content/uploads/2014/08/munda.jpg</string>
+	</dict>
+	<dict>
+		<key>spot</key>
+		<string>Biarritz - La Grande Plage</string>
+		<key>url</key>
+		<string>http://46.105.54.176:80/64connections/biarritzgrandeplage.stream/playlist.m3u8</string>
+		<key>image</key>
+		<string>http://im-3.msw.ms/photoLab/33367.jpg</string>
+	</dict>
+	<dict>
+		<key>spot</key>
+		<string>Hossegor - La Centrale</string>
+		<key>url</key>
+		<string>http://46.105.54.176:80/64connections/hossegor.stream/playlist.m3u8</string>
+		<key>image</key>
+		<string>http://www.surfsession.com/wp-content/uploads/2009/12/IMG_3840-1.jpg</string>
+	</dict>
+	<dict>
+		<key>spot</key>
+		<string>Hossegor - Les Estagnots</string>
+		<key>url</key>
+		<string>http://92.48.78.127/live/segnossie.stream/playlist.m3u8</string>
+		<key>image</key>
+		<string>http://www.naturalsurflodge.com/images/top-hossegor/graviere-hossegor.jpg</string>
+	</dict>
+	<dict>
+		<key>spot</key>
+		<string>Burleigh Heads</string>
+		<key>url</key>
+		<string>http://streamer.swellnet.com.au:1935/surfcams/mp4:burleigh.stream/playlist.m3u8</string>
+		<key>image</key>
+		<string>http://www.grindtv.com/wp-content/uploads/2010/03/dd109174.jpg</string>
+	</dict>
+	<dict>
+		<key>spot</key>
+		<string>Snapper Rocks</string>
+		<key>url</key>
+		<string>http://streamer.swellnet.com.au:1935/surfcams/snapper-rocks.stream/playlist.m3u8</string>
+		<key>image</key>
+		<string>http://mattcoleman.com.au/wp-content/uploads/2015/01/AU6A7366-Edit-Edit.jpg</string>
+	</dict>
+	<dict>
+		<key>spot</key>
+		<string>Margaret River</string>
+		<key>url</key>
+		<string>http://streamer.swellnet.com.au:1935/surfcams/margaret-river.stream/playlist.m3u8</string>
+		<key>image</key>
+		<string>http://1.bp.blogspot.com/-O-JdEY41dWU/Uhd5z9OpHZI/AAAAAAAAACM/vIG0To2XXpg/s1600/090926-Beach-Break-cranking-near-Margaret-River3%5B1%5D.jpg</string>
+	</dict>
+	<dict>
+		<key>spot</key>
+		<string>Teahupoo</string>
+		<key>url</key>
+		<string>http://46.105.54.176:80/64connections/teahupoo.stream/playlist.m3u8</string>
+		<key>image</key>
+		<string>http://a.espncdn.com/photo/2014/0822/as_surf_empty_2048.jpg</string>
+	</dict>
+	<dict>
+		<key>spot</key>
+		<string>Bingin</string>
+		<key>url</key>
+		<string>http://69.64.62.134:1935/livecam/cam4.stream/playlist.m3u8</string>
+		<key>image</key>
+		<string>http://im-3.msw.ms/photoLab/73107.jpg</string>
+	</dict>
+	<dict>
+		<key>spot</key>
+		<string>Keramas</string>
+		<key>url</key>
+		<string>http://69.64.62.134:1935/livecam/cam3.stream/playlist.m3u8</string>
+		<key>image</key>
+		<string>http://im-3.msw.ms/photoLab/fullWidth/266663.jpg</string>
+	</dict>
+</array>
+</plist>

@@ -13,6 +13,9 @@
 		6702231C1BD176B4002E2036 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6702231A1BD176B4002E2036 /* Main.storyboard */; };
 		6702231E1BD176B4002E2036 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6702231D1BD176B4002E2036 /* Assets.xcassets */; };
 		670223291BD176B4002E2036 /* SurfateTVTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670223281BD176B4002E2036 /* SurfateTVTests.swift */; };
+		673B96391BD1AB76005527E5 /* CameraCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673B96381BD1AB76005527E5 /* CameraCell.swift */; };
+		673B963F1BD1C478005527E5 /* CamsSource.plist in Resources */ = {isa = PBXBuildFile; fileRef = 673B963E1BD1C478005527E5 /* CamsSource.plist */; };
+		673B96411BD1C4A4005527E5 /* SurfCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673B96401BD1C4A4005527E5 /* SurfCamera.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,9 @@
 		670223241BD176B4002E2036 /* SurfateTVTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SurfateTVTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		670223281BD176B4002E2036 /* SurfateTVTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfateTVTests.swift; sourceTree = "<group>"; };
 		6702232A1BD176B4002E2036 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		673B96381BD1AB76005527E5 /* CameraCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraCell.swift; sourceTree = "<group>"; };
+		673B963E1BD1C478005527E5 /* CamsSource.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CamsSource.plist; sourceTree = "<group>"; };
+		673B96401BD1C4A4005527E5 /* SurfCamera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurfCamera.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,12 +83,10 @@
 		670223131BD176B4002E2036 /* SurfateTV */ = {
 			isa = PBXGroup;
 			children = (
-				670223141BD176B4002E2036 /* AppDelegate.swift */,
-				670223161BD176B4002E2036 /* FirstViewController.swift */,
-				670223181BD176B4002E2036 /* SecondViewController.swift */,
-				6702231A1BD176B4002E2036 /* Main.storyboard */,
-				6702231D1BD176B4002E2036 /* Assets.xcassets */,
-				6702231F1BD176B4002E2036 /* Info.plist */,
+				673B963D1BD1B47D005527E5 /* Model */,
+				673B963A1BD1AB7E005527E5 /* Views */,
+				673B963B1BD1AB8A005527E5 /* ViewControllers */,
+				673B963C1BD1AB96005527E5 /* Support */,
 			);
 			path = SurfateTV;
 			sourceTree = "<group>";
@@ -94,6 +98,43 @@
 				6702232A1BD176B4002E2036 /* Info.plist */,
 			);
 			path = SurfateTVTests;
+			sourceTree = "<group>";
+		};
+		673B963A1BD1AB7E005527E5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				673B96381BD1AB76005527E5 /* CameraCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		673B963B1BD1AB8A005527E5 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				670223161BD176B4002E2036 /* FirstViewController.swift */,
+				670223181BD176B4002E2036 /* SecondViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		673B963C1BD1AB96005527E5 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				670223141BD176B4002E2036 /* AppDelegate.swift */,
+				6702231A1BD176B4002E2036 /* Main.storyboard */,
+				6702231D1BD176B4002E2036 /* Assets.xcassets */,
+				673B963E1BD1C478005527E5 /* CamsSource.plist */,
+				6702231F1BD176B4002E2036 /* Info.plist */,
+			);
+			name = Support;
+			sourceTree = "<group>";
+		};
+		673B963D1BD1B47D005527E5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				673B96401BD1C4A4005527E5 /* SurfCamera.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,6 +187,7 @@
 				TargetAttributes = {
 					670223101BD176B4002E2036 = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = 534ZL84PZG;
 					};
 					670223231BD176B4002E2036 = {
 						CreatedOnToolsVersion = 7.1;
@@ -179,6 +221,7 @@
 			files = (
 				6702231E1BD176B4002E2036 /* Assets.xcassets in Resources */,
 				6702231C1BD176B4002E2036 /* Main.storyboard in Resources */,
+				673B963F1BD1C478005527E5 /* CamsSource.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,7 +239,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				673B96391BD1AB76005527E5 /* CameraCell.swift in Sources */,
 				670223191BD176B4002E2036 /* SecondViewController.swift in Sources */,
+				673B96411BD1C4A4005527E5 /* SurfCamera.swift in Sources */,
 				670223151BD176B4002E2036 /* AppDelegate.swift in Sources */,
 				670223171BD176B4002E2036 /* FirstViewController.swift in Sources */,
 			);
@@ -318,10 +363,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SurfateTV/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ppacie.SurfateTV;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -330,10 +378,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SurfateTV/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ppacie.SurfateTV;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -380,6 +431,7 @@
 				6702232F1BD176B4002E2036 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		670223301BD176B4002E2036 /* Build configuration list for PBXNativeTarget "SurfateTVTests" */ = {
 			isa = XCConfigurationList;
@@ -388,6 +440,7 @@
 				670223321BD176B4002E2036 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
