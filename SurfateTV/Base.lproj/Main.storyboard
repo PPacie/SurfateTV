@@ -18,27 +18,27 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="oHs-BP-mkf">
-                                <rect key="frame" x="0.0" y="0.0" width="1920" height="1088"/>
+                                <rect key="frame" x="0.0" y="148" width="1920" height="940"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="MEz-UF-Ma3">
-                                    <size key="itemSize" width="408" height="295"/>
+                                    <size key="itemSize" width="860" height="585"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CamCell" id="fbY-0Z-cNU" customClass="CameraCell" customModule="SurfateTV" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="140" width="408" height="295"/>
+                                        <rect key="frame" x="0.0" y="248" width="860" height="585"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="408" height="295"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="860" height="585"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RyF-Eq-cuR">
-                                                    <rect key="frame" x="8" y="8" width="392" height="236"/>
+                                                    <rect key="frame" x="8" y="8" width="844" height="526"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Camera Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uww-Mv-eSm">
-                                                    <rect key="frame" x="8" y="252" width="392" height="35"/>
-                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Camera Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uww-Mv-eSm">
+                                                    <rect key="frame" x="8" y="542" width="844" height="35"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -63,11 +63,31 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="bottomMargin" secondItem="oHs-BP-mkf" secondAttribute="bottom" constant="-8" id="0AA-Dt-mZ9"/>
+                            <constraint firstAttribute="trailing" secondItem="oHs-BP-mkf" secondAttribute="trailing" id="2om-x0-beV"/>
                             <constraint firstAttribute="trailing" secondItem="oHs-BP-mkf" secondAttribute="trailing" id="BdP-CZ-s7S"/>
                             <constraint firstItem="oHs-BP-mkf" firstAttribute="bottom" secondItem="4ug-Mw-9AY" secondAttribute="top" constant="8" symbolic="YES" id="EAv-4K-FAU"/>
-                            <constraint firstItem="oHs-BP-mkf" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="top" id="Hpr-os-MbF"/>
+                            <constraint firstItem="oHs-BP-mkf" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="top" constant="20" symbolic="YES" id="Hpr-os-MbF"/>
+                            <constraint firstItem="oHs-BP-mkf" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" id="Pr4-GO-2j8"/>
+                            <constraint firstItem="oHs-BP-mkf" firstAttribute="bottom" secondItem="4ug-Mw-9AY" secondAttribute="top" constant="8" symbolic="YES" id="TVf-Kf-Ggu"/>
+                            <constraint firstAttribute="trailing" secondItem="oHs-BP-mkf" secondAttribute="trailing" id="VQW-D4-OYM"/>
                             <constraint firstItem="oHs-BP-mkf" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="cSf-JX-3Rw"/>
+                            <constraint firstItem="oHs-BP-mkf" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="qII-9b-pow"/>
+                            <constraint firstItem="oHs-BP-mkf" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="8" symbolic="YES" id="qXr-DT-w4Z"/>
+                            <constraint firstItem="oHs-BP-mkf" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="yEn-8a-rMT"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="0AA-Dt-mZ9"/>
+                                <exclude reference="BdP-CZ-s7S"/>
+                                <exclude reference="EAv-4K-FAU"/>
+                                <exclude reference="Hpr-os-MbF"/>
+                                <exclude reference="Pr4-GO-2j8"/>
+                                <exclude reference="VQW-D4-OYM"/>
+                                <exclude reference="cSf-JX-3Rw"/>
+                                <exclude reference="yEn-8a-rMT"/>
+                            </mask>
+                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Live Cams" image="first" id="acW-dT-cKf"/>
                     <connections>
