@@ -34,7 +34,6 @@ class SurfCamera {
         if let camsFromArray = NSArray(contentsOfFile: filePath) {
             for dictionary in camsFromArray {
                 let surfCam = SurfCamera(surfDict: dictionary as! NSDictionary)
-                print("Porque no Print: \(surfCam.camTitle)")
                 allTheCams.append(surfCam)
             }
         }
