@@ -7,8 +7,22 @@
 //
 
 import UIKit
+import AVKit
 
 class CameraPlayerViewController: UIViewController {
     
-    var cameraURL = NSURL() 
+    var playerVC = AVPlayerViewController()
+    var cameraURL = NSURL()
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        playerVC.player = AVPlayer(URL: cameraURL)
+        playerVC.player?.play()
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "PlayCamera" {
+            playerVC = (segue.destinationViewController as? AVPlayerViewController)!
+        }
+    }
 }
