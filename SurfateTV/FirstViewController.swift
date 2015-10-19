@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FirstViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class FirstViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     // MARK: Outlets
 
@@ -17,6 +17,7 @@ class FirstViewController: UIViewController, UICollectionViewDataSource, UIColle
     // MARK: Model
     
     var surfCams = [SurfCamera]()
+    var defaultCellSize = CGSizeMake(844,526)
     
     // MARK: View Lifecycle
     
@@ -35,7 +36,7 @@ class FirstViewController: UIViewController, UICollectionViewDataSource, UIColle
         return surfCams.count
     }
     
-    // MARK: CollectionView Delegate
+    // MARK: CollectionView Delegate Methods
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCellWithReuseIdentifier("CamCell", forIndexPath: indexPath) as? CameraCell else { return UICollectionViewCell() }
@@ -44,6 +45,39 @@ class FirstViewController: UIViewController, UICollectionViewDataSource, UIColle
         
         return cell
     }
+    
+    override func didUpdateFocusInContext(context: UIFocusUpdateContext, withAnimationCoordinator coordinator: UIFocusAnimationCoordinator) {
+        
+        if let previousView = context.previouslyFocusedView as? CameraCell {            
+            UIView.animateWithDuration(0.1, animations: { () -> Void in
+                previousView.camImage?.frame.size = self.defaultCellSize
 
+            })
+        }
+        
+        if let nextView = context.nextFocusedView as? CameraCell {
+            let newWidth = defaultCellSize.width + (defaultCellSize.width * 0.02)
+            let newHeight = defaultCellSize.height + (defaultCellSize.height * 0.02)
+            UIView.animateWithDuration(0.1, animations: { () -> Void in
+                nextView.camImage?.frame.size = CGSizeMake(newWidth, newHeight)
+            })
+        }
+    }
+    
+    // MARK: Segue
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if segue.identifier == "ShowCamera" {
+            if let indexPath = (collectionView?.indexPathsForSelectedItems()?.first) {
+                guard let cell = collectionView.cellForItemAtIndexPath(indexPath) as? CameraCell else { return }
+                guard let CPvc = segue.destinationViewController as? CameraPlayerViewController else { return }
+                guard cell.surfCam?.camURL != nil else { return }
+                CPvc.cameraURL = NSURL(string: (cell.surfCam?.camURL)!)!
+            }            
+        }
+        
+        
+    }
 }
 

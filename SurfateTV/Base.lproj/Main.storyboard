@@ -51,11 +51,12 @@
                                             <constraint firstAttribute="trailingMargin" secondItem="Uww-Mv-eSm" secondAttribute="trailing" id="D3G-ec-Tt7"/>
                                             <constraint firstAttribute="topMargin" secondItem="RyF-Eq-cuR" secondAttribute="top" id="TbH-Az-rXq"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="RyF-Eq-cuR" secondAttribute="trailing" id="Y4k-rW-twr"/>
-                                            <constraint firstItem="Uww-Mv-eSm" firstAttribute="top" secondItem="RyF-Eq-cuR" secondAttribute="bottom" constant="8" id="vRD-qf-s72"/>
+                                            <constraint firstItem="Uww-Mv-eSm" firstAttribute="top" secondItem="RyF-Eq-cuR" secondAttribute="bottom" constant="8" symbolic="YES" id="vRD-qf-s72"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="camImage" destination="RyF-Eq-cuR" id="E3Z-5y-B3P"/>
                                             <outlet property="camTitle" destination="Uww-Mv-eSm" id="sbR-0g-wyI"/>
+                                            <segue destination="cp7-HO-ji6" kind="showDetail" identifier="ShowCamera" id="PqH-MV-bZX"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -97,6 +98,45 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2246" y="-640"/>
+        </scene>
+        <!--Camera Player View Controller-->
+        <scene sceneID="GQz-hl-OD3">
+            <objects>
+                <viewController id="cp7-HO-ji6" customClass="CameraPlayerViewController" customModule="SurfateTV" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xrQ-GC-b9h"/>
+                        <viewControllerLayoutGuide type="bottom" id="NaT-yq-z91"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JWN-P3-nG6">
+                        <rect key="frame" x="0.0" y="0.0" width="1285" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qc5-vt-XoZ">
+                                <rect key="frame" x="0.0" y="0.0" width="1285" height="1080"/>
+                                <connections>
+                                    <segue destination="UAm-t1-jh0" kind="embed" id="m9e-bJ-HWb"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="qc5-vt-XoZ" secondAttribute="trailing" id="1sb-ik-Snp"/>
+                            <constraint firstItem="qc5-vt-XoZ" firstAttribute="leading" secondItem="JWN-P3-nG6" secondAttribute="leading" id="FH3-DT-6rC"/>
+                            <constraint firstItem="qc5-vt-XoZ" firstAttribute="top" secondItem="xrQ-GC-b9h" secondAttribute="bottom" id="auy-KX-5ll"/>
+                            <constraint firstItem="qc5-vt-XoZ" firstAttribute="bottom" secondItem="NaT-yq-z91" secondAttribute="top" id="eAL-0l-jc7"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jOx-b7-PX3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4272" y="-640"/>
+        </scene>
+        <!--AV Player View Controller-->
+        <scene sceneID="4Az-x3-Bu5">
+            <objects>
+                <avPlayerViewController videoGravity="AVLayerVideoGravityResizeAspect" id="UAm-t1-jh0" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ga9-4T-QCg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6262" y="-640"/>
         </scene>
         <!--Surf Movies-->
         <scene sceneID="wg7-f3-ORb">

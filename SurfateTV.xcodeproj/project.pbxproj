@@ -16,6 +16,7 @@
 		673B96391BD1AB76005527E5 /* CameraCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673B96381BD1AB76005527E5 /* CameraCell.swift */; };
 		673B963F1BD1C478005527E5 /* CamsSource.plist in Resources */ = {isa = PBXBuildFile; fileRef = 673B963E1BD1C478005527E5 /* CamsSource.plist */; };
 		673B96411BD1C4A4005527E5 /* SurfCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673B96401BD1C4A4005527E5 /* SurfCamera.swift */; };
+		67859DCC1BD55A6E00DF4DBA /* CameraPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67859DCB1BD55A6E00DF4DBA /* CameraPlayerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		673B96381BD1AB76005527E5 /* CameraCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraCell.swift; sourceTree = "<group>"; };
 		673B963E1BD1C478005527E5 /* CamsSource.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CamsSource.plist; sourceTree = "<group>"; };
 		673B96401BD1C4A4005527E5 /* SurfCamera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurfCamera.swift; sourceTree = "<group>"; };
+		67859DCB1BD55A6E00DF4DBA /* CameraPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraPlayerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 			children = (
 				670223161BD176B4002E2036 /* FirstViewController.swift */,
 				670223181BD176B4002E2036 /* SecondViewController.swift */,
+				67859DCB1BD55A6E00DF4DBA /* CameraPlayerViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67859DCC1BD55A6E00DF4DBA /* CameraPlayerViewController.swift in Sources */,
 				673B96391BD1AB76005527E5 /* CameraCell.swift in Sources */,
 				670223191BD176B4002E2036 /* SecondViewController.swift in Sources */,
 				673B96411BD1C4A4005527E5 /* SurfCamera.swift in Sources */,
