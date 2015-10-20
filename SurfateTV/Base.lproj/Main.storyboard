@@ -51,6 +51,7 @@
                                             <constraint firstAttribute="trailingMargin" secondItem="Uww-Mv-eSm" secondAttribute="trailing" id="D3G-ec-Tt7"/>
                                             <constraint firstAttribute="topMargin" secondItem="RyF-Eq-cuR" secondAttribute="top" id="TbH-Az-rXq"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="RyF-Eq-cuR" secondAttribute="trailing" id="Y4k-rW-twr"/>
+                                            <constraint firstItem="RyF-Eq-cuR" firstAttribute="centerX" secondItem="fbY-0Z-cNU" secondAttribute="centerX" id="itf-MI-i2s"/>
                                             <constraint firstItem="Uww-Mv-eSm" firstAttribute="top" secondItem="RyF-Eq-cuR" secondAttribute="bottom" constant="35" id="vRD-qf-s72"/>
                                         </constraints>
                                         <connections>
