@@ -17,7 +17,7 @@ class FirstViewController: UIViewController, UICollectionViewDataSource, UIColle
     // MARK: Model
     
     var surfCams = [SurfCamera]()
-    var defaultCellSize = CGSizeMake(844,526)
+    var defaultImageSize = CGSize?()
     
     // MARK: View Lifecycle
     
@@ -48,16 +48,26 @@ class FirstViewController: UIViewController, UICollectionViewDataSource, UIColle
     
     override func didUpdateFocusInContext(context: UIFocusUpdateContext, withAnimationCoordinator coordinator: UIFocusAnimationCoordinator) {
         
+        // Get the cell.camImage size for the very first time.
+        if defaultImageSize == nil {
+            print("Default Image Size being SET")
+            guard let indexPath = collectionView.indexPathsForVisibleItems().last else { return }
+            guard let cell = collectionView.cellForItemAtIndexPath(indexPath) as? CameraCell else { return }
+            defaultImageSize = cell.camImage!.frame.size
+        }
+        
+        // Assign the default image size to the previous focused image in the collection. 
         if let previousView = context.previouslyFocusedView as? CameraCell {            
             UIView.animateWithDuration(0.1, animations: { () -> Void in
-                previousView.camImage?.frame.size = self.defaultCellSize
+                previousView.camImage?.frame.size = self.defaultImageSize!
 
             })
         }
         
+        // Make zoom in the next collection view image.
         if let nextView = context.nextFocusedView as? CameraCell {
-            let newWidth = defaultCellSize.width + (defaultCellSize.width * 0.02)
-            let newHeight = defaultCellSize.height + (defaultCellSize.height * 0.02)
+            let newWidth = defaultImageSize!.width + (defaultImageSize!.width * 0.02)
+            let newHeight = defaultImageSize!.height + (defaultImageSize!.height * 0.02)
             UIView.animateWithDuration(0.1, animations: { () -> Void in
                 nextView.camImage?.frame.size = CGSizeMake(newWidth, newHeight)
             })
