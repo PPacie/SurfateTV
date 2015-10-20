@@ -40,7 +40,7 @@
 		<key>url</key>
 		<string>http://streamer.swellnet.com.au:1935/surfcams/mp4:burleigh.stream/playlist.m3u8</string>
 		<key>image</key>
-		<string>http://www.grindtv.com/wp-content/uploads/2010/03/dd109174.jpg</string>
+		<string>http://cdn1.theinertia.com/wp-content/uploads/2014/06/67515.jpg</string>
 	</dict>
 	<dict>
 		<key>spot</key>
@@ -80,7 +80,7 @@
 		<key>url</key>
 		<string>http://69.64.62.134:1935/livecam/cam3.stream/playlist.m3u8</string>
 		<key>image</key>
-		<string>http://im-3.msw.ms/photoLab/fullWidth/266663.jpg</string>
+		<string>http://cdn2.surfersvillage.com/sites/default/files/field/image/temp-download-4106_1408647099_lineup2373bali13kirstin.jpg</string>
 	</dict>
 </array>
 </plist>

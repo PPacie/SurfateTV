@@ -66,8 +66,8 @@ class LiveCamsViewController: UIViewController, UICollectionViewDataSource, UICo
         
         // Make zoom in the next collection view image.
         if let nextView = context.nextFocusedView as? CameraCell {
-            let newWidth = defaultImageSize!.width + (defaultImageSize!.width * 0.02)
-            let newHeight = defaultImageSize!.height + (defaultImageSize!.height * 0.02)
+            let newWidth = defaultImageSize!.width + (defaultImageSize!.width * 0.08)
+            let newHeight = defaultImageSize!.height + (defaultImageSize!.height * 0.08)
             UIView.animateWithDuration(0.1, animations: { () -> Void in
                 nextView.camImage?.frame.size = CGSizeMake(newWidth, newHeight)
             })
