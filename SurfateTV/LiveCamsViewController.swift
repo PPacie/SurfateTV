@@ -51,6 +51,7 @@ class LiveCamsViewController: UIViewController, UICollectionViewDataSource, UICo
         if let previousView = context.previouslyFocusedView as? CameraCell {
             coordinator.addCoordinatedAnimations({ () -> Void in
                 previousView.camImage?.adjustsImageWhenAncestorFocused = false
+                previousView.camTitle?.textColor = UIColor.lightGrayColor()
                 }, completion: nil)
         }
         
@@ -58,6 +59,7 @@ class LiveCamsViewController: UIViewController, UICollectionViewDataSource, UICo
         if let nextView = context.nextFocusedView as? CameraCell {
             coordinator.addCoordinatedAnimations({ () -> Void in
                 nextView.camImage?.adjustsImageWhenAncestorFocused = true
+                nextView.camTitle?.textColor = UIColor.whiteColor()
                 }, completion: nil)
         }
     }
