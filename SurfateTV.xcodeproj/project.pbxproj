@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		670223151BD176B4002E2036 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670223141BD176B4002E2036 /* AppDelegate.swift */; };
-		670223171BD176B4002E2036 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670223161BD176B4002E2036 /* FirstViewController.swift */; };
-		670223191BD176B4002E2036 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670223181BD176B4002E2036 /* SecondViewController.swift */; };
+		670223171BD176B4002E2036 /* LiveCamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670223161BD176B4002E2036 /* LiveCamsViewController.swift */; };
+		670223191BD176B4002E2036 /* SurfMoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670223181BD176B4002E2036 /* SurfMoviesViewController.swift */; };
 		6702231C1BD176B4002E2036 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6702231A1BD176B4002E2036 /* Main.storyboard */; };
 		6702231E1BD176B4002E2036 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6702231D1BD176B4002E2036 /* Assets.xcassets */; };
 		670223291BD176B4002E2036 /* SurfateTVTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670223281BD176B4002E2036 /* SurfateTVTests.swift */; };
@@ -32,8 +32,8 @@
 /* Begin PBXFileReference section */
 		670223111BD176B4002E2036 /* SurfateTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SurfateTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		670223141BD176B4002E2036 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		670223161BD176B4002E2036 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		670223181BD176B4002E2036 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		670223161BD176B4002E2036 /* LiveCamsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveCamsViewController.swift; sourceTree = "<group>"; };
+		670223181BD176B4002E2036 /* SurfMoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfMoviesViewController.swift; sourceTree = "<group>"; };
 		6702231B1BD176B4002E2036 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6702231D1BD176B4002E2036 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6702231F1BD176B4002E2036 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -113,8 +113,8 @@
 		673B963B1BD1AB8A005527E5 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				670223161BD176B4002E2036 /* FirstViewController.swift */,
-				670223181BD176B4002E2036 /* SecondViewController.swift */,
+				670223161BD176B4002E2036 /* LiveCamsViewController.swift */,
+				670223181BD176B4002E2036 /* SurfMoviesViewController.swift */,
 				67859DCB1BD55A6E00DF4DBA /* CameraPlayerViewController.swift */,
 			);
 			name = ViewControllers;
@@ -244,10 +244,10 @@
 			files = (
 				67859DCC1BD55A6E00DF4DBA /* CameraPlayerViewController.swift in Sources */,
 				673B96391BD1AB76005527E5 /* CameraCell.swift in Sources */,
-				670223191BD176B4002E2036 /* SecondViewController.swift in Sources */,
+				670223191BD176B4002E2036 /* SurfMoviesViewController.swift in Sources */,
 				673B96411BD1C4A4005527E5 /* SurfCamera.swift in Sources */,
 				670223151BD176B4002E2036 /* AppDelegate.swift in Sources */,
-				670223171BD176B4002E2036 /* FirstViewController.swift in Sources */,
+				670223171BD176B4002E2036 /* LiveCamsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

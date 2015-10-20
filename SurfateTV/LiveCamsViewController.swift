@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FirstViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+class LiveCamsViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     // MARK: Outlets
 
@@ -56,7 +56,7 @@ class FirstViewController: UIViewController, UICollectionViewDataSource, UIColle
             defaultImageSize = cell.camImage!.frame.size
         }
         
-        // Assign the default image size to the previous focused image in the collection. 
+        // Assign the default image size to the previous focused image in the collection.
         if let previousView = context.previouslyFocusedView as? CameraCell {            
             UIView.animateWithDuration(0.1, animations: { () -> Void in
                 previousView.camImage?.frame.size = self.defaultImageSize!
