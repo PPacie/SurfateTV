@@ -17,7 +17,6 @@ class LiveCamsViewController: UIViewController, UICollectionViewDataSource, UICo
     // MARK: Model
     
     var surfCams = [SurfCamera]()
-    var defaultImageSize = CGSize?()
     
     // MARK: View Lifecycle
     
@@ -48,27 +47,17 @@ class LiveCamsViewController: UIViewController, UICollectionViewDataSource, UICo
     
     override func didUpdateFocusInContext(context: UIFocusUpdateContext, withAnimationCoordinator coordinator: UIFocusAnimationCoordinator) {
         
-        // Get the cell.camImage size for the very first time.
-        if defaultImageSize == nil {
-            print("Default Image Size being SET")
-            guard let indexPath = collectionView.indexPathsForVisibleItems().last else { return }
-            guard let cell = collectionView.cellForItemAtIndexPath(indexPath) as? CameraCell else { return }
-            defaultImageSize = cell.camImage!.frame.size
-        }
-        
-        // Assign the default image size to the previous focused image in the collection.
+        // Remove focus from cell image.
         if let previousView = context.previouslyFocusedView as? CameraCell {
             coordinator.addCoordinatedAnimations({ () -> Void in
-                previousView.camImage?.frame.size = self.defaultImageSize!
+                previousView.camImage?.adjustsImageWhenAncestorFocused = false
                 }, completion: nil)
         }
         
-        // Make zoom in the next collection view image.
+        // Add Focus to cell image.
         if let nextView = context.nextFocusedView as? CameraCell {
-            let newWidth = defaultImageSize!.width + (defaultImageSize!.width * 0.08)
-            let newHeight = defaultImageSize!.height + (defaultImageSize!.height * 0.08)
             coordinator.addCoordinatedAnimations({ () -> Void in
-                nextView.camImage?.frame.size = CGSizeMake(newWidth, newHeight)
+                nextView.camImage?.adjustsImageWhenAncestorFocused = true
                 }, completion: nil)
         }
     }
