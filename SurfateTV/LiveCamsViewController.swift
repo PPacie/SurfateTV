@@ -47,21 +47,18 @@ class LiveCamsViewController: UIViewController, UICollectionViewDataSource, UICo
     
     override func didUpdateFocusInContext(context: UIFocusUpdateContext, withAnimationCoordinator coordinator: UIFocusAnimationCoordinator) {
         
-        // Remove focus from cell image.
-        if let previousView = context.previouslyFocusedView as? CameraCell {
-            coordinator.addCoordinatedAnimations({ () -> Void in
+        coordinator.addCoordinatedAnimations({ () -> Void in
+            // Remove focus from cell image.
+            if let previousView = context.previouslyFocusedView as? CameraCell {
                 previousView.camImage?.adjustsImageWhenAncestorFocused = false
                 previousView.camTitle?.textColor = UIColor.lightGrayColor()
-                }, completion: nil)
-        }
-        
-        // Add Focus to cell image.
-        if let nextView = context.nextFocusedView as? CameraCell {
-            coordinator.addCoordinatedAnimations({ () -> Void in
+            }
+            // Add Focus to cell image.
+            if let nextView = context.nextFocusedView as? CameraCell {
                 nextView.camImage?.adjustsImageWhenAncestorFocused = true
                 nextView.camTitle?.textColor = UIColor.whiteColor()
-                }, completion: nil)
-        }
+            }
+        }, completion: nil)
     }
     
     // MARK: Segue
@@ -76,8 +73,6 @@ class LiveCamsViewController: UIViewController, UICollectionViewDataSource, UICo
                 CPvc.cameraURL = NSURL(string: (cell.surfCam?.camURL)!)!
             }            
         }
-        
-        
     }
 }
 
