@@ -34,9 +34,7 @@ class LiveCamsViewController: UIViewController, UICollectionViewDataSource, UICo
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return surfCams.count
     }
-    
-    // MARK: CollectionView Delegate Methods
-    
+        
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCellWithReuseIdentifier("CamCell", forIndexPath: indexPath) as? CameraCell else { return UICollectionViewCell() }
         
