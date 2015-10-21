@@ -44,23 +44,7 @@ class LiveCamsViewController: UIViewController, UICollectionViewDataSource, UICo
         
         return cell
     }
-    
-    override func didUpdateFocusInContext(context: UIFocusUpdateContext, withAnimationCoordinator coordinator: UIFocusAnimationCoordinator) {
         
-        coordinator.addCoordinatedAnimations({ () -> Void in
-            // Remove focus from cell image.
-            if let previousView = context.previouslyFocusedView as? CameraCell {
-                previousView.camImage?.adjustsImageWhenAncestorFocused = false
-                previousView.camTitle?.textColor = UIColor.lightGrayColor()
-            }
-            // Add Focus to cell image.
-            if let nextView = context.nextFocusedView as? CameraCell {
-                nextView.camImage?.adjustsImageWhenAncestorFocused = true
-                nextView.camTitle?.textColor = UIColor.whiteColor()
-            }
-        }, completion: nil)
-    }
-    
     // MARK: Segue
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

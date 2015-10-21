@@ -39,7 +39,7 @@
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RyF-Eq-cuR">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="cam-thumbnail-placeholder" adjustsImageWhenAncestorFocused="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RyF-Eq-cuR">
                                                     <rect key="frame" x="8" y="8" width="646" height="361"/>
                                                 </imageView>
                                             </subviews>
@@ -52,14 +52,8 @@
                                             <constraint firstAttribute="trailingMargin" secondItem="Uww-Mv-eSm" secondAttribute="trailing" id="D3G-ec-Tt7"/>
                                             <constraint firstAttribute="topMargin" secondItem="RyF-Eq-cuR" secondAttribute="top" id="TbH-Az-rXq"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="RyF-Eq-cuR" secondAttribute="trailing" id="Y4k-rW-twr"/>
-                                            <constraint firstItem="RyF-Eq-cuR" firstAttribute="centerX" secondItem="fbY-0Z-cNU" secondAttribute="centerX" id="itf-MI-i2s"/>
                                             <constraint firstItem="Uww-Mv-eSm" firstAttribute="top" secondItem="RyF-Eq-cuR" secondAttribute="bottom" constant="40" id="vRD-qf-s72"/>
                                         </constraints>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="itf-MI-i2s"/>
-                                            </mask>
-                                        </variation>
                                         <connections>
                                             <outlet property="camImage" destination="RyF-Eq-cuR" id="E3Z-5y-B3P"/>
                                             <outlet property="camTitle" destination="Uww-Mv-eSm" id="sbR-0g-wyI"/>
@@ -205,6 +199,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="cam-thumbnail-placeholder" width="960" height="540"/>
         <image name="first" width="30" height="30"/>
         <image name="second" width="30" height="30"/>
     </resources>

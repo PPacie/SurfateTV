@@ -16,7 +16,7 @@ class CameraCell: UICollectionViewCell {
     var surfCam: SurfCamera? {
         didSet {
             //Clean current cell content
-            camImage?.image = nil
+            camImage?.image = UIImage(named: "cam-thumbnail-placeholder")
             camTitle?.text = nil
             
             //Update Camera Title
