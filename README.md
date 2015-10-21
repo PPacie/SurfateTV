@@ -7,3 +7,4 @@ Made using Swift 2.1 and Xcode 7.1 b3.
 
 ## Disclaimer
 This is a Demo app with no commercial pourposes. 
+The webcam urls belong to: [Bali Belly](https://balibelly.com), [Swellnet](https://swellnet.com) and [Webcam HD](https://webcam-hd.fr).
